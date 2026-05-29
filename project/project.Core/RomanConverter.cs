@@ -43,4 +43,14 @@ public class RomanConverter
 
         throw new NotImplementedException();
     }
+
+    public int ConvertToInteger(string roman)
+    {
+       if(roman == "I")
+       {
+            return 1;
+       }
+
+        throw new NotImplementedException();
+    }
 }
