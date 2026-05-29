@@ -42,4 +42,30 @@ public class RomanConverterTests
         // Assert
         Assert.Equal("IV", result);
     }
+
+    [Fact]
+    public void ConvertToRoman_WhenNumberIs19_ReturnsXIX()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+
+        // Act
+        var result = converter.ConvertToRoman(19);
+
+        // Assert
+        Assert.Equal("XIX", result);
+    }
+
+    [Fact]
+    public void ConvertToRoman_WhenNumberIs50_ReturnsL()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+
+        // Act
+        var result = converter.ConvertToRoman(50);
+
+        // Assert
+        Assert.Equal("L", result);
+    }
 }
