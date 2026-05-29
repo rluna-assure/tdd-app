@@ -16,4 +16,17 @@ public class RomanConverterTests
         // Assert
         Assert.Equal("I", result);
     }
+
+    [Fact]
+    public void ConvertToRoman_WhenNumberIs4_ReturnsIV()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+
+        // Act
+        var result = converter.ConvertToRoman(4);
+
+        // Assert
+        Assert.Equal("IV", result);
+    }
 }
