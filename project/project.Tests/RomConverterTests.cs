@@ -68,4 +68,35 @@ public class RomanConverterTests
         // Assert
         Assert.Equal("L", result);
     }
+
+    [Fact]
+    public void ConvertToRoman_WhenNumberIs99_ReturnsXCIX()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToRoman(99);
+        // Assert
+        Assert.Equal("XCIX", result);
+    }
+
+    [Fact]
+    public void ConvertToRoman_WhenNumberIs1000_ReturnsM()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToRoman(1000);
+        // Assert
+        Assert.Equal("M", result);
+    }
+    [Fact]
+    public void ConvertToRoman_WhenNumberIsNegative_ReturnsException()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act & Assert
+        Assert.Throws<ArgumentOutOfRangeException>(() => converter.ConvertToRoman(-1));
+    }
+
 }

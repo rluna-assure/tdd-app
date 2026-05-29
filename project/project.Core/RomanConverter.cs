@@ -23,6 +23,11 @@ public class RomanConverter
     };
     public string ConvertToRoman(int number)
     {
+        if (number <= 0 || number > 3999)
+        {
+            throw new ArgumentOutOfRangeException(nameof(number), "Input must be between 1 and 3999.");
+        }
+
         var romanNumber = new StringBuilder();
 
         foreach (var par in keyValuePairs)
