@@ -134,4 +134,15 @@ public class RomanConverterTests
         Assert.Equal(10, result);
     }
 
+    [Fact]
+    public void ConvertToInteger_EmptyString_Returns0()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("");
+        // Assert
+        Assert.Equal(0, result);
+    }
+
 }
