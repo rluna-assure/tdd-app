@@ -46,24 +46,25 @@ public class RomanConverter
 
     public int ConvertToInteger(string roman)
     {
+        int number = 0;
         if(string.IsNullOrEmpty(roman))
         {
-            return 0;
+            return number;
         }
 
-        if(roman == "I")
-        {
-            return 1;
-        }
-       
-        if(roman == "IV"){
-            return 4;
-        }
+        roman = roman.ToUpper();
 
-        if(roman == "X")
+        foreach (var par in keyValuePairs)
         {
-            return 10;
+            while (roman.StartsWith(par.Value))
+            {
+                number += par.Key;
+                roman = roman.Substring(par.Value.Length);
+            }
         }
+        return number;
+        
+              
 
 
         throw new NotImplementedException();
