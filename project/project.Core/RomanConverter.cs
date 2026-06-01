@@ -40,8 +40,6 @@ public class RomanConverter
         }
 
         return romanNumber.ToString();
-
-        throw new NotImplementedException();
     }
 
     public int ConvertToInteger(string roman)
@@ -63,11 +61,6 @@ public class RomanConverter
             }
         }
         return number;
-        
-              
-
-
-        throw new NotImplementedException();
     }
     
 }
