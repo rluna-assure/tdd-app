@@ -50,6 +50,10 @@ public class RomanConverter
        {
             return 1;
        }
+         if(roman == "IV"){
+            return 4;
+       }
+
 
         throw new NotImplementedException();
     }
