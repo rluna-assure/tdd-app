@@ -145,4 +145,47 @@ public class RomanConverterTests
         Assert.Equal(0, result);
     }
 
+    [Fact]
+    public void ConvertToInteger_WhenRomanIsIX_Returns9()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("IX");
+        // Assert
+        Assert.Equal(9, result);
+    }
+
+     [Fact]
+    public void ConvertToInteger_WhenRomanIsL_Returns50()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("L");
+        // Assert
+        Assert.Equal(50, result);
+    }
+
+    [Fact]
+    public void ConvertToInteger_WhenRomanIsCM_Returns900()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("CM");
+        // Assert
+        Assert.Equal(900, result);
+    }
+
+    [Fact]
+    public void ConvertToInteger_WhenRomanIsM_Returns1000()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("M");
+        // Assert
+        Assert.Equal(1000, result);
+    }
 }
