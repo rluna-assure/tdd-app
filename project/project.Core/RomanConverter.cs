@@ -51,7 +51,6 @@ public class RomanConverter
         }
 
         roman = roman.ToUpper();
-
         foreach (var par in keyValuePairs)
         {
             while (roman.StartsWith(par.Value))
