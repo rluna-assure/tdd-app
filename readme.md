@@ -3,10 +3,19 @@ This repository demonstrate TDD principles applied from scratch to cover all tes
 It features two functions to convert natural numbers to Roman numerals and vice versa.
 It includes validations for edge cases, such as empty strings and negative numbers.
 
+## Method: ConvertToInteger
+
+This method converts a Roman numeral (provided as a `string`) into its integer (`int`) equivalent using a progressive left-to-right parsing strategy.
+
+### How It Works
+1. **Validation and Normalization:** The method trims whitespace and converts the input text to uppercase to avoid formatting issues.
+2. **Linear Processing:** It iterates through an ordered collection of Roman numeral symbols.
+### Method Signature
+
 ---
 
 #### Getting Started
-Clone the app to your local files and restore the app following steps.
+Clone the app to your local environment and restore the app following steps.
 
 ##### Re-requisites
 .net sdk(compatible with global.json)
@@ -38,7 +47,7 @@ Once generated, you can view the results by opening the index.html file inside t
 Actually the project has the next coverage
 
 100% lines Coverage
-95% branch Coverage
+92% branch Coverage
 
 
 #### Usage Example
