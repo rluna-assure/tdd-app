@@ -47,7 +47,7 @@ public class RomanConverter
         int number = 0;
         if(string.IsNullOrEmpty(roman))
         {
-            return number;
+            throw new ArgumentException("Input cannot be null or empty.", nameof(roman));
         }
 
         roman = roman.ToUpper();

@@ -101,6 +101,15 @@ public class RomanConverterTests
     }
 
     [Fact]
+    public void ConvertToRoman_WhenNumberIsGreaterThan3999_ReturnsException()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act & Assert
+        Assert.Throws<ArgumentOutOfRangeException>(() => converter.ConvertToRoman(4000));
+    }
+
+    [Fact]
     public void ConvertToInteger_WhenRomanIsI_Returns1()
     {
         // Arrange
@@ -135,14 +144,16 @@ public class RomanConverterTests
     }
 
     [Fact]
-    public void ConvertToInteger_EmptyString_Returns0()
+    public void ConvertToInteger_EmptyString_ReturnsError()
     {
         // Arrange
         var converter = new RomanConverter();
         // Act
-        var result = converter.ConvertToInteger("");
+        var excepcion = Assert.Throws<ArgumentException>(() => converter.ConvertToInteger(""));
         // Assert
-        Assert.Equal(0, result);
+        Assert.Equal("roman", excepcion.ParamName);
+        Assert.StartsWith("Input cannot be null or empty.", excepcion.Message);
+        
     }
 
     [Fact]
