@@ -44,22 +44,30 @@ public class RomanConverter
 
     public int ConvertToInteger(string roman)
     {
-        int number = 0;
-        if(string.IsNullOrEmpty(roman))
+        if (string.IsNullOrWhiteSpace(roman))
         {
             throw new ArgumentException("Input cannot be null or empty.", nameof(roman));
         }
 
-        roman = roman.ToUpper();
+        string cleanedRoman = roman.Trim().ToUpperInvariant();
+        int totalNumber = 0;
+        string remainingString = cleanedRoman;
+
         foreach (var par in keyValuePairs)
         {
-            while (roman.StartsWith(par.Value))
+            while (remainingString.StartsWith(par.Value, StringComparison.Ordinal))
             {
-                number += par.Key;
-                roman = roman.Substring(par.Value.Length);
+                totalNumber += par.Key;
+                remainingString = remainingString.Substring(par.Value.Length);
             }
         }
-        return number;
+
+        if (!string.IsNullOrEmpty(remainingString) || ConvertToRoman(totalNumber) != cleanedRoman)
+        {
+            throw new ArgumentException($"The input '{roman}' is not a valid Roman numeral sequence.");
+        }
+
+        return totalNumber;
     }
     
 }

@@ -199,4 +199,16 @@ public class RomanConverterTests
         // Assert
         Assert.Equal(1000, result);
     }
+
+    [Fact]
+    public void ConvertToInteger_WhenRomanIsInvalidSequence_ReturnsError()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var excepcion = Assert.Throws<ArgumentException>(() => converter.ConvertToInteger("IIII"));
+        // Assert
+        Assert.Equal("The input 'IIII' is not a valid Roman numeral sequence.", excepcion.Message);
+    }
+
 }
