@@ -46,15 +46,22 @@ public class RomanConverter
 
     public int ConvertToInteger(string roman)
     {
-       if(roman == "I")
-       {
+        if(roman == "I")
+        {
             return 1;
-       }
-         if(roman == "IV"){
+        }
+       
+        if(roman == "IV"){
             return 4;
-       }
+        }
+
+        if(roman == "X")
+        {
+            return 10;
+        }
 
 
         throw new NotImplementedException();
     }
+    
 }
