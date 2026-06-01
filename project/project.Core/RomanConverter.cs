@@ -46,6 +46,11 @@ public class RomanConverter
 
     public int ConvertToInteger(string roman)
     {
+        if(string.IsNullOrEmpty(roman))
+        {
+            return 0;
+        }
+
         if(roman == "I")
         {
             return 1;
