@@ -54,3 +54,6 @@ publish/
 
 # Custom local user rules
 *.zip
+
+# Coverage results
+coveragereport/
