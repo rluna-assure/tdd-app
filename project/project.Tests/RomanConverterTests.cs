@@ -123,4 +123,15 @@ public class RomanConverterTests
     }
 
 
+    [Fact]
+    public void ConvertToInteger_WhenRomanIsX_Returns10()
+    {
+        // Arrange
+        var converter = new RomanConverter();
+        // Act
+        var result = converter.ConvertToInteger("X");
+        // Assert
+        Assert.Equal(10, result);
+    }
+
 }
