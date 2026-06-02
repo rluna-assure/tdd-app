@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.Core", "project.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.Tests", "project.Tests\project.Tests.csproj", "{685ECB04-38FB-4D45-83C7-0E9F6019BCA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.Webapi", "project.Webapi\project.Webapi.csproj", "{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,8 +43,23 @@ Global
 		{685ECB04-38FB-4D45-83C7-0E9F6019BCA1}.Release|x64.Build.0 = Release|Any CPU
 		{685ECB04-38FB-4D45-83C7-0E9F6019BCA1}.Release|x86.ActiveCfg = Release|Any CPU
 		{685ECB04-38FB-4D45-83C7-0E9F6019BCA1}.Release|x86.Build.0 = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|x64.Build.0 = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8E6F6B7-FCDE-4E5B-8D6F-82BD397082E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {334AC94B-B647-49FC-88A6-22C75EF666E5}
 	EndGlobalSection
 EndGlobal
