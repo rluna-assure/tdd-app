@@ -8,7 +8,7 @@ namespace project.Webapi.Controllers
     public class RomanController : ControllerBase
     {
 
-        [HttpGet("roman-to-literal/{romanNumber}")]
+        [HttpGet("arabic/{romanNumber}")]
         public ActionResult<int> RomanToLiteral([FromRoute] string romanNumber)
         {
             var converter = new RomanConverter();
@@ -16,12 +16,15 @@ namespace project.Webapi.Controllers
             return romanLiteral;
         }
 
-
-        [HttpGet("number-to-roman/{number}")]
+        [HttpGet("{number}")]
         public ActionResult<string> LiteralToRoman([FromRoute] string number)
         {
+            if (!int.TryParse(number, out int numericValue))
+            {
+                return BadRequest("Invalid number format.");
+            }
             var converter = new RomanConverter();
-            var romanLiteral = converter.ConvertToRoman(int.Parse(number));
+            var romanLiteral = converter.ConvertToRoman(numericValue);
             return romanLiteral;
         }
     }
