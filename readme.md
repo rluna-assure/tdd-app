@@ -7,6 +7,11 @@ It includes validations for edge cases, such as empty strings and negative numbe
 
 This method converts a Roman numeral (provided as a `string`) into its integer (`int`) equivalent using a progressive left-to-right parsing strategy.
 
+## Method: ConvertToRoman
+
+This method converts an integer (`int`) into its Roman numeral (`string`).
+
+
 ### How It Works
 1. **Validation and Normalization:** The method trims whitespace and converts the input text to uppercase to avoid formatting issues.
 2. **Linear Processing:** It iterates through an ordered collection of Roman numeral symbols.
