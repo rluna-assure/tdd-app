@@ -13,6 +13,11 @@ This method converts a Roman numeral (provided as a `string`) into its integer (
 ### Method Signature
 
 ---
+### Rules
+- Base Character Mapping The basic symbols must map strictly to their standard values: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, and M = 1000.
+- Subtractive Notation To avoid repeating a character four times, a smaller value symbol must be placed before a larger value symbol to subtract it (e.g., 4 must be represented as IV, not IIII).
+- Boundary Validation The input must be a positive integer, as Roman numerals do not have a representation for negative numbers.
+---
 
 #### Getting Started
 Clone the app to your local environment and restore the app following steps.
@@ -51,13 +56,23 @@ Actually the project has the next coverage
 
 
 #### Usage Example
-``` csharp
-// Example usage of the core domain service
-var converter = new RomanNumeralConverter();
+
+navigate to project/project.webapi
+```
+run 'dotnet run'
+```
+for testing 
+navigate to:
+``` 
+ http://localhost:5005/roman/arabic/{romanString}
+```
+ http://localhost:5005/roman/{naturalNumber}
 
 // Natural to Roman
 string roman = converter.ToRoman(2026); // Returns "MMXXVI"
 
 // Roman to Natural
 int natural = converter.ToRoman("XIV"); // Returns 14
-```
+
+
+
