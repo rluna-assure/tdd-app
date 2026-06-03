@@ -48,13 +48,6 @@ Once generated, you can view the results by opening the index.html file inside t
 
 ---
 
-#### Coverage
-Actually the project has the next coverage
-
-100% lines Coverage
-92% branch Coverage
-
-
 #### Usage Example
 
 navigate to project/project.webapi
@@ -74,6 +67,12 @@ string roman = converter.ToRoman(2026); // Returns "MMXXVI"
 // Roman to Natural
 int natural = converter.ToRoman("XIV"); // Returns 14
 
+---
 
+#### Coverage
+Actually the project has the next coverage
+
+100% lines Coverage
+92% branch Coverage
 
 ![alt text](image.png)
