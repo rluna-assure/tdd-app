@@ -78,6 +78,6 @@ int natural = converter.ToRoman("XIV"); // Returns 14
 Actually the project has the next coverage
 
 100% lines Coverage
-92% branch Coverage
+100% branch Coverage
 
 ![alt text](image.png)
